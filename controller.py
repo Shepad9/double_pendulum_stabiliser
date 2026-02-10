@@ -100,8 +100,7 @@ def controller(state, t):
     Kp2 = 220.0
     Kd2 = 80.0
     
-    control_signal = -(Kp1 * theta1 + Kd1 * omega1 + 
-                      Kp2 * theta2 + Kd2 * omega2)
+    control_signal = 0 # set this to desired value
     
     return control_signal
 
@@ -176,3 +175,6 @@ if __name__ == "__main__":
     print("- lqr_controller: Linear quadratic regulator approach")
     print("- adaptive_controller: State-dependent gains")
     print("\nTest your controller by running double_pendulum.py")
+
+def control(state, t):
+    return adaptive_controller(state, t)

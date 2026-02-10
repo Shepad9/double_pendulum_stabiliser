@@ -13,10 +13,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from scipy.integrate import odeint
-import double_pendulum.controller as controller
+import controller
 
 try:
-    from double_pendulum.controller import controller
+    from controller import controller
     print("Successfully loaded controller from controller.py")
 except ImportError:
     print("ERROR: Could not import controller from controller.py")
